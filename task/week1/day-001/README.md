@@ -1,5 +1,1 @@
-TES
-
-TES 2
-
-TES DEV-B
+Tes Conflict DEV-B README
