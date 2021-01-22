@@ -1,3 +1,1 @@
-TES
-
-TES A dan B
+Tes file conflict README
