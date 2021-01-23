@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Declaration</title>
+</head>
+<body>
+    <script>
+        //function declaration
+     
+        //1 => object literal dengan function Ujian di ubah menjadi object declaration
+        function Ujian(name, mataKuliah, nilai, passingGrade){
+            let ujian = {};
+            ujian.nilai = nilai;
+            ujian.name = name;
+            ujian.mataKuliah = mataKuliah;
+            ujian.passingGrade = passingGrade;
+
+            ujian.totalNilai = function (nilaiQuiz){
+                this.nilai += nilaiQuiz
+                if(this.nilai >= this.passingGrade){
+                    console.log(`Selamat ${this.name} total nilai anda adalah ${this.nilai}`);
+                }else{
+                    console.log(`Maaf ${this.name} total nilai anda adalah ${this.nilai}`);
+                }
+            }
+            return ujian;
+
+        }
+        let juju = Ujian('juju','kalkulus', 50, 70);
+        console.log(juju);
+
+        
+        /*==========================================================================================================================*/
+        //2  => object literal dengan function tahunlahir di ubah menjadi object declaration
+        function Karyawan(name, posisi, umur, tahun){
+            let karyawan = {};
+            karyawan.name = name;
+            karyawan.posisi = posisi;
+            karyawan.umur = umur;
+            karyawan.tahun = tahun;
+
+            karyawan.tahunlahir = function (tahunlahir){
+                tahunlahir -=  this.umur 
+                console.log(`Karyawan ${this.name} posisi ${this.posisi} memiliki tahun kelahiran ${this.umur}`);
+            }
+            return karyawan;
+
+        }
+        let pegawai = Karyawan('juju','programmer', 27, 2021);
+        console.log(pegawai);
+
+
+        /*==========================================================================================================================*/
+        //3  => object literal dengan function totalX di ubah menjadi object declaration
+        function nilaiX(nilaiB,nilaiC,nilaiD){
+            let nilai = {};
+            nilai.nilaiA = '';
+            nilai.nilaiB = nilaiB;
+            nilai.nilaiC = nilaiC;
+            nilai.nilaiD = nilaiD;
+
+            nilai.totalX = function (){
+                this.nilaiA = this.nilaiB + this.nilaiC - this.nilaiD
+                console.log(`total nilai A adalah ${this.nilaiA}`);
+            }
+
+            return nilai;
+
+        }
+
+        let nilai = nilaiX(8,8,1);
+        console.log(nilai);
+
+        
+        /*==========================================================================================================================*/
+        //4  => object literal dengan function hargaJual pena di ubah menjadi object declaration
+        function hargaPena(merek,warna,harga){
+            let totalHarga = {};
+            totalHarga.merek = merek;
+            totalHarga.warna= warna;
+            totalHarga.harga = harga;
+
+            totalHarga.hagaJual = function (qty){
+                this.totalHarga = this.harga * qty
+                console.log(` total harga pena yang harus dibayar adalah ${this.totalHarga}`);
+            }
+
+            return totalHarga;
+
+        }
+
+        let totalHarga = hargaPena('parker','black', 2000);
+        console.log(totalHarga);
+
+    /*==========================================================================================================================*/
+    //perbedaan dari object literal dengan object declaration yaitu:
+    // cara pemanggilan nya lebih mudah dengan menggunakan object declaration
+        
+    </script>
+</body>
+</html>

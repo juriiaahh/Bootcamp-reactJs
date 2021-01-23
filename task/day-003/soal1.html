@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literal</title>
+</head>
+<body>
+    <script>
+        //object literal
+        let ujian = {
+            name:'juriah',
+            mataKuliah: 'Matematika',
+            nilai: 80,
+            passingGrade : 70,
+            totalNilai: function(nilaiQuiz){
+                this.nilai =  this.nilai + nilaiQuiz
+                if(this.nilai >= this.passingGrade){
+                    console.log(`Selamat ${this.name} total nilai anda adalah ${this.nilai}`);
+                }else{
+                    console.log(`Maaf ${this.name} total nilai anda adalah ${this.nilai}`);
+                }
+            }
+        }
+
+        let karyawan = {
+            name: 'juju',
+            posisi: 'Programmer',
+            umur: 25,
+            tahun:"",
+            tahunLahir: function(tahunLahir){
+                this.umur = tahunLahir - this.umur
+                console.log(`Karyawan ${this.name} posisi ${this.posisi} memiliki tahun kelahiran ${this.umur}`);
+            }
+        }
+        
+        let nilaiX = {
+            nilaiB:8,
+            nilaiC:8, 
+            nilaiD:1,
+            nilaiA:'',
+            totalX: function(){
+                this.nilaiA = this.nilaiB + this.nilaiC - this.nilaiD
+                console.log(`total nilai A adalah ${this.nilaiA}`);
+            }
+        }
+
+         let pena = {
+                merek:'parker',
+                warna:'gray',
+                harga:5000,
+                totalHarga:'',
+                hargaJual: function(qty){
+                    this.totalHarga = this.harga * qty
+                    console.log(` total harga pena yang harus dibayar adalah ${this.totalHarga}`);
+                }
+            }
+
+        //kekurangan dari penggunaan object literal adalah jumlah object tidak banyak sehingga tidak efesien 
+
+    </script>
+</body>
+</html>

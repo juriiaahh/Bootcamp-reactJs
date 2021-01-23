@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. object liberal /literal kalau jumlah object tidak banyak
+        let Mahasiswa = {
+            name:'juju', //properti
+            energi:10,
+            makan: function(porsi){
+                this.energi = this.energi + porsi;
+                console.log((`Halo ${this.name} selamat makan`));
+                
+            }
+        }
+
+        // let Mahasiswa = {
+        //     name:'jur', //properti
+        //     energi:15,
+        //     makan: function(porsi){
+        //         this.energi = this.energi + porsi;
+        //         console.log((`Halo ${this.name} selamat makan`));
+                
+        //     }
+        // }
+
+        //2. fuction declaration
+        //  function Mahasiswa(name, energi){// buat template nya
+        //      let mahasiswa = {};
+        //      mahasiswa.name = name;
+        //      mahasiswa.energi = energi; 
+
+        //      mahasiswa.makan = function(porsi){
+        //          this.energi += porsi;
+        //          console.log(`Hallo, ${this.name}. selamat makan`);
+                 
+        //      }
+
+        //      mahasiswa.main = function(jam){
+        //          this.energi -= jam;
+        //          console.log(`Hallo, ${this.name}. selamat main`);
+                 
+        //      }
+        //      return mahasiswa;
+        //  }
+        //  let juju = Mahasiswa('juju', 30);
+        //  let ijur = Mahasiswa('jur', 20);
+
+        // membuat object terpisah
+        // object yg pertama berisi method
+        // akan dihubungkan dengan objek mahasiswa
+        //supaya menyimpan di memori sekali aja tidak berulang ulang
+
+        // const methodMahasiswa = {
+        //     makan : function(porsi){
+        //         this.energi += porsi;
+        //         console.log(`Hallo ${this.name}. selamat makan`);
+        //     },
+
+        //     main : function(jam){
+        //         this.energi -= jam;
+        //         console.log(`Hallo ${this.name}. selamat main`);
+        //     }
+        // };
+
+        // function Mahasiswa(name, energi){
+        //     let mahasiswa = {};
+        //     mahasiswa.name = name;
+        //     mahasiswa.energi = energi;
+
+        //     mahasiswa.makan = methodMahasiswa.makan;
+        //     mahasiswa.main = methodMahasiswa.main;
+        // }
+
+        // let juju = Mahasiswa('juju', 20);
+        // let jur = Mahasiswa('jur', 20);
+
+
+        //3. contructor function pakai keyword new
+        // function Mahasiswa(name, energi){
+        //     this.name = name;
+        //     this.energi = energi;
+
+        //     this.makan = function(porsi){
+        //         this.energi += porsi;
+        //         console.log(`Hallo ${this.name}. selamat makan`);
+        //     }
+        // }
+
+        // let juju = new Mahasiswa('juju', 10);
+
+        //4. object.create() solusi lain yg lebih efektif
+        // const methodMahasiswa = {
+        //     makan: function(porsi){
+        //         this.energi += porsi;
+        //         console.log(`hallo ${this.name}.selamat makan`);
+        //     },
+
+        //     main: function(jam){
+        //         this.energi -= jam;
+        //         console.log(`hallo ${this.name}.selamat main`);
+        //     },
+
+        //     tidur: function(jam){
+        //         this.energi += jam * 2;
+        //         console.log(`hallo ${this.name}. selamat tidur`);
+        //     }
+        // };
+
+        // function Mahasiswa(name, energi){
+        //     let mahasiswa = Object.create(methodMahasiswa);
+        //     mahasiswa.name = name;
+        //     mahasiswa.energi = energi;
+
+        //     return mahasiswa;
+        // }
+
+        // let juju = Mahasiswa('juju', 20);
+        // let jur = Mahasiswa('jur', 20);
+
+    </script>
+</body>
+</html>
