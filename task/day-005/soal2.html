@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Point</title>
+</head>
+<body>
+    <button onclick="run()">Loop With Range</button>
+
+    <p id="demo"></p>
+    <script>
+        let angka1;
+        let angka2;
+        let min;
+        let max;
+        let i;
+
+        function Angka1() {
+            do{
+                angka1 = prompt("Silahkan input angka antara 1 dan 20");
+                number1 = parseInt(angka1);
+            }while(number1 < 1 || number1 > 20);
+        }
+
+        function Angka2(){
+            do{
+                angka2 = prompt("Silahkan input angka antara 1 dan 20");
+                number2 = parseInt(angka2);
+            }while(number2 < 1 || number2 > 20);
+        }
+
+        function rangeAngka(){
+            if(number1 > number2){
+                max = number1;
+                min = number2;
+            }else{
+                max = number2;
+                min = number1;
+            }
+        }
+
+        function myFunction(){
+            x = '';
+            for(i = min; i <= max; i++){
+                document.getElementById("demo").innerHTML =
+                x+= i + ', ';
+      
+            }
+        }
+
+        function run(){
+            Angka1();
+            Angka2();
+            rangeAngka();
+            myFunction();
+        }
+        
+    </script>
+</body>
+</html>

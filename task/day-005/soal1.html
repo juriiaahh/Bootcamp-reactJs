@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Point</title>
+</head>
+<body>
+    <button onclick="ratingFilm()">Rating film</button>
+
+    <p id="demo"></p>
+    <script>
+        let usia;
+        function ratingFilm() {
+            usia = prompt("Silahkan input usia anda");
+            umur = parseInt(usia);
+
+            if(umur >= 21){
+                text = "Dewasa";
+            }else if(umur >= 13){
+               text = "Remaja";
+            }else if(umur >= 9){
+                text = "Bimbingan Orang Tua";
+            }else if(umur < 9){
+               text = "Semua Usia";
+            }
+            
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

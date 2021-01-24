@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Point</title>
+</head>
+<body>
+    <button onclick="myFunction()">BubbleSort Button</button>
+
+    <p id="demo"></p>
+
+    <script>
+        
+        let angka = [1, 3, 4, 1, 201, 100, 4, 7, 42, 85, 12, 583, 13, 104, 31, 76, 49];
+
+        function bubbleSort(angka){
+            let swapp;
+            let panjangAngka = angka.length - 1 ;
+            let newAngka = angka;
+
+            do{
+                swapp = false;
+                for (let i=0; i < panjangAngka; i++)
+                {
+                    if (newAngka[i] < newAngka[i+1])
+                    {
+                    var tempAngka = newAngka[i];
+                    newAngka[i] = newAngka[i+1];
+                    newAngka[i+1] = tempAngka;
+                    swapp = true;
+                    }
+                }
+                panjangAngka--;
+            } while (swapp);
+            return newAngka;
+        }
+
+        document.getElementById("demo").innerHTML = angka;
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = bubbleSort(angka);
+        }
+
+    </script>
+</body>
+</html>
