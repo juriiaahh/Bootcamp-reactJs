@@ -1,0 +1,36 @@
+{
+    "status": "OK",
+    "code": 200,
+    "total": 5,
+    "data": [{
+        "Nama_lengkap": "Bartell",
+        "Email": "alaina.eichmann@gmail.com",
+        "No_Ponsel": "+6028700817610",
+        "Domisili": "Lake Amelyville",
+        "id": 26125
+    }, {
+        "Nama_lengkap": "Gerhold",
+        "Email": "hcruickshank@hotmail.com",
+        "No_Ponsel": "+2827051423420",
+        "Domisili": "Windlerstad",
+        "id": 9369519
+    }, {
+        "Nama_lengkap": "Halvorson",
+        "Email": "teagan.walker@kemmer.com",
+        "No_Ponsel": "+3048477511283",
+        "Domisili": "Boyletown",
+        "id": 24776393
+    }, {
+        "Nama_lengkap": "Satterfield",
+        "Email": "aabbott@yahoo.com",
+        "No_Ponsel": "+4160528431956",
+        "Domisili": "West Devantown",
+        "id": 23947471
+    }, {
+        "Nama_lengkap": "Wisozk",
+        "Email": "waters.britney@hotmail.com",
+        "No_Ponsel": "+3249197358072",
+        "Domisili": "Herzogburgh",
+        "id": 726140
+    }]
+}
