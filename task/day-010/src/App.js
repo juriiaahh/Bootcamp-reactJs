@@ -4,8 +4,8 @@ import Carousel from './components/Carousel';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import Price from './components/Price';
-import Login from './day-011/login';
-import Register from './day-011/register';
+import Login from './day011-day012/login';
+import Register from './day011-day012/register';
 
 function App() {
   return (
