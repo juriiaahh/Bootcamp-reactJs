@@ -1,0 +1,11 @@
+.navbar {
+    padding: 10px 20px 20px 20px;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 15px;
+    box-shadow: 0px 20px 0px #851c50;
+}
+.nav-item.active a{
+    color:#851c50 !important;
+    font-weight:600;
+}
