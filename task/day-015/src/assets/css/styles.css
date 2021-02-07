@@ -1,0 +1,26 @@
+hr.hr {
+    border: 2px solid #851c50;
+    border-radius: 5px;
+  }
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #851c50;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .btn-color{
+    background-color: #851c50;
+    color: white;
+  }
+  .card-product{
+    border: 2px solid #851c50;
+    border-radius: 30px;
+  }
+
+  .card-color-price{
+    background-color: #F28FC0;
+  }
+
+  
